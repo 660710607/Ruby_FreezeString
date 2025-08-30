@@ -9,8 +9,7 @@
 
 <br> -- ตัวอย่างโค้ด
 ```s = "Hello"
-s << " World"
-<br>
+s << " World" ```
 # ถ้ารันโค้ด 2 บรรทัดข้างบน จะพบว่า Output = "Hello World" เนื่องจาก s นั้นยัง mutable by default (ยังแก้ไขค่าได้อยู่)
 <br>
 ```s = "Hello"
