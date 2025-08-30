@@ -22,3 +22,5 @@ s << " Peace" </pre>
 str.freeze
 new_str = str + "!"
 puts new_str </pre>
+
+## เปรียบเทียบกับภาษา Java/C/Python
