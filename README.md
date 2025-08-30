@@ -24,3 +24,5 @@ new_str = str + "!"
 puts new_str </pre>
 
 ## เปรียบเทียบกับภาษา Java/C/Python
+# Java
+<br>I dont know
