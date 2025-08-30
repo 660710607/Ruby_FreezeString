@@ -18,7 +18,7 @@ s << " Peace" </pre>
 <br>ที่เกิด error ดังกล่าวเพราะว่า เราพยายามแก้ String ที่ถูก freeze ไปแล้ว (.freeze) ซึ่งจะเป็น error ชนิดที่ชื่อว่า "FrozenError)
 <br><br>ซึ่งถ้าอยากแก้ไข จะต้องสร้าง String ใหม่ แล้วแก้แทน
 <br><br> -> ตัวอย่างโค้ด
-<pre> str = "Hello World"
+<pre>str = "Hello World"
 str.freeze
 new_str = str + "!"
 puts new_str </pre>
