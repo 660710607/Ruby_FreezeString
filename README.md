@@ -40,7 +40,7 @@ b = +a
 b << "World"
 puts b </pre>
 โค้ดนี้ไม่เกิด error เพราะเป็นการเปลี่ยน string ที่ถูกทำให้ไม่ freeze แล้ว
-<br>#### จากแหล่งที่มา https://www.techotopia.com/index.php/Ruby_String_Concatenation_and_Comparison#Freezing_a_Ruby_String
+#### จากแหล่งที่มา https://www.techotopia.com/index.php/Ruby_String_Concatenation_and_Comparison#Freezing_a_Ruby_String
 <br><br>
 
 ## เปรียบเทียบกับภาษา Java/C/Python
