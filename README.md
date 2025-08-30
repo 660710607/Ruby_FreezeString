@@ -25,14 +25,15 @@ puts new_str </pre>
 #### จากแหล่งที่มา https://www.techotopia.com/index.php/Ruby_String_Concatenation_and_Comparison#Freezing_a_Ruby_String
 
 <br><br> ส่วนการคืนค่าของ String ที่ Freeze แล้วนั้นสามารถทำได้โดยใช้ -@ กับ +@
-<br> "-@" จะเป็นการคืนค่า String ที่ Freeze แล้ว
-<br> โดยถ้า freeze แล้วจะคืนตัวเดิม แต่ถ้ายังไม่ freeze จะทำการ freeze แล้วถึงค่อยคืน
+<br> ; "-@" จะเป็นการคืนค่า String ที่ Freeze แล้ว
+<br> - โดยถ้า freeze แล้วจะคืนตัวเดิม แต่ถ้ายังไม่ freeze จะทำการ freeze แล้วถึงค่อยคืน
 <br><br> -> ตัวอย่างโค้ด
 <pre>a = "Hello"
 b = -a
 b << "World" </pre>
 โค้ดนี้จะ error บรรทัดที่ 3 เนื่องจาก b นั้นคือออบเจกต์เดียวกับ a แต่ถูก freeze ไว้แล้ว จึงเปลี่ยนค่าไม่ได้ (FrozenError)
-<br><br> "+@" จะเป็นการคืนค่า String ถ้ายังไม่ถูก freeze จะคืน obj เดิม แต่ถ้า freeze อยู่จะทำการ dup สำเนาใหม่ที่ไม่ froze
+<br><br> ; "+@" จะเป็นการคืนค่า String ที่ไม่มีการ freeze
+<br> - โดยถ้ายังไม่ถูก freeze จะคืน obj เดิม แต่ถ้า freeze อยู่จะทำการ dup สำเนาใหม่ที่ไม่ froze
 <br><br> -> ตัวอย่างโค้ด
 <pre>a = "Hello".freeze
 b = +a
