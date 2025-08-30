@@ -1,6 +1,6 @@
 # Freezing a Ruby String
 
-## เนื้อหา
+# เนื้อหา
 ปกติในภาษา Ruby การแก้ไข String หนึ่งจะสามารถทำได้ทันที (Mutable Object เช่น String , Array , Hash)
 <br> แต่ถ้าอยากให้แก้ไขไม่ได้จะต้องทำการ Freeze ใส่ String หรือวัตถุนั้นๆ
 <br><br> - โดยเราจะต้องใช้คำสั่ง .freeze กับ String หรือ Object ใดๆ 
@@ -22,7 +22,7 @@ s << " Peace" </pre>
 str.freeze
 new_str = str + "!"
 puts new_str </pre>
-#### จากแหล่งที่มา https://www.techotopia.com/index.php/Ruby_String_Concatenation_and_Comparison#Freezing_a_Ruby_String
+## จากแหล่งที่มา https://www.techotopia.com/index.php/Ruby_String_Concatenation_and_Comparison#Freezing_a_Ruby_String
 
 <br><br> ส่วนการคืนค่าของ String ที่ Freeze แล้วนั้นสามารถทำได้โดยใช้ -@ กับ +@
 <br> ; "-@" จะเป็นการคืนค่า String ที่ Freeze แล้ว
@@ -40,11 +40,11 @@ b = +a
 b << "World"
 puts b </pre>
 โค้ดนี้ไม่เกิด error เพราะเป็นการเปลี่ยน string ที่ถูกทำให้ไม่ freeze แล้ว
-#### จากแหล่งที่มา https://www.techotopia.com/index.php/Ruby_String_Concatenation_and_Comparison#Freezing_a_Ruby_String
+## จากแหล่งที่มา https://www.techotopia.com/index.php/Ruby_String_Concatenation_and_Comparison#Freezing_a_Ruby_String
 <br><br>
 
-## เปรียบเทียบกับภาษา Java/C/Python
-## - Java
+# เปรียบเทียบกับภาษา Java/C/Python
+# - Java
 <br>ในภาษา Java นั้นได้ถูกออกแบบมาให้ obj บางชนิดเป็น immutable อยู่แล้ว (by default) เช่น String
 <br> ( Immutable = once it is created, it cannot be changed. )
 <pre>String s1 = "knowledge";
@@ -53,7 +53,7 @@ s1 = s1.concat(" base");
 System.out.println(s1); </pre>
 จากโค้ดบนจะ output : knowledge base
 <br> ซึ่งเมื่อเรา concat (ต่อสตริง) มันจะสร้างสตริง "knowledge base" และใส่เข้า s1 ซึ่งสตริงเดิม (original) จะยังไม่ถูกเปลี่ยน (The original string remains unchanged.)
-#### จาก https://www.geeksforgeeks.org/java/java-string-is-immutable-what-exactly-is-the-meaning/
+## จาก https://www.geeksforgeeks.org/java/java-string-is-immutable-what-exactly-is-the-meaning/
 
 <br><br> คำว่า "final" เป็น non-access modifier ซึ่งจะใช้เพื่อป้องกันการแก้ไขข้อมูล
 <br>ใช้กับตัวแปร = ค่าไม่เปลี่ยน , ใช้กับเมธอด = ไม่สามารถถูกเขียนทับได้ในคลาสลูก , ใช้กับคลาส = สืบทอดไม่ได้ (cannot be extended)
@@ -62,17 +62,17 @@ b = "Hola";; </pre>
 จากบนจะ error : The final local variable b cannot be assigned. It must be blank and not using a compound assignment
 <br>เพราะถ้าตัวแปรถูกประกาศเป็น final แล้วจะ กำหนดค่าให้มันได้เพียงครั้งเดียวเท่านั้น
 <br>หลังจากนั้นจะเปลี่ยนค่าไม่ได้อีก
-#### จาก https://www.geeksforgeeks.org/java/final-keyword-in-java/
+## จาก https://www.geeksforgeeks.org/java/final-keyword-in-java/
 
-## - C
+# - C
 <br>ในภาษาซีจะไม่มีการสร้างสตริงโดยตรง แต่จะเป็นการสร้างอาร์เรย์ จาก char
 <br>ซึ่งจะมีการใช้ const ทำให้ไม่สามารถแก้ไขค่าได้ (ทำให้ variable เป็นแบบ read-only)
 <pre>const char s[] = "Hello";
 s[0] = 'h';</pre>
 <br>จากโค้ดจะ error : error: assignment of read-only variable เพราะพยายามแก้ไข string ที่ immutable เหมือน freeze ไปแล้ว
-#### จาก https://www.geeksforgeeks.org/c/const-qualifier-in-c/
+## จาก https://www.geeksforgeeks.org/c/const-qualifier-in-c/
 
-## - Python
+# - Python
 <br>ในภาษาไพธอน string จะมีความเป็น immutable อยู่แล้ว (คล้ายจาวา)
 <br>พูดง่ายๆ เราไม่สามารถแก้ไขตัวอักษรภายใน string เดิมได้ ซึ่งการเปลี่ยน string จะสร้าง string ใหม่ ไม่ใช่แก้ไข string เดิม
 <pre>s = "Hello"
