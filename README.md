@@ -44,7 +44,7 @@ puts b </pre>
 <br><br>
 
 ## เปรียบเทียบกับภาษา Java/C/Python
-### - Java
+# - Java
 <br>ในภาษา Java นั้นได้ถูกออกแบบมาให้ obj บางชนิดเป็น immutable อยู่แล้ว (by default) เช่น String
 <br> ( Immutable = once it is created, it cannot be changed. )
 <pre>String s1 = "knowledge";
@@ -63,3 +63,5 @@ b = "Hola";; </pre>
 <br>เพราะถ้าตัวแปรถูกประกาศเป็น final แล้วจะ กำหนดค่าให้มันได้เพียงครั้งเดียวเท่านั้น
 <br>หลังจากนั้นจะเปลี่ยนค่าไม่ได้อีก
 #### จาก https://www.geeksforgeeks.org/java/final-keyword-in-java/
+
+# - C
