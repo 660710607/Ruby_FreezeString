@@ -70,6 +70,7 @@ b = "Hola";; </pre>
 <pre>const char s[] = "Hello";
 s[0] = 'h';</pre>
 <br>จากโค้ดจะ error : error: assignment of read-only variable เพราะพยายามแก้ไข string ที่ immutable เหมือน freeze ไปแล้ว
+#### จาก https://www.geeksforgeeks.org/c/const-qualifier-in-c/
 
 ## - Python
 <br>ในภาษาไพธอน string จะมีความเป็น immutable อยู่แล้ว (คล้ายจาวา)
