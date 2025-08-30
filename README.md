@@ -6,11 +6,11 @@
 <br>
 <br> - โดยเราจะต้องใช้คำสั่ง .freeze กับ String หรือ Object ใดๆ 
 <br> - จะเหมือนเป็นการล็อก String นั้นไว้ ไม่ให้แก้ค่าได้
--- ตัวอย่างโค้ด
+<br> -> ตัวอย่างโค้ด
 <pre> s = "Hello"
 s << " World"  </pre>
 # ถ้ารันโค้ด 2 บรรทัดข้างบน จะพบว่า Output = "Hello World" เนื่องจาก s นั้นยัง mutable by default (ยังแก้ไขค่าได้อยู่)
-<pre>s = "Hello"
+<pre> s = "Hello"
 s << " World"
 s.freeze
 s << " Peace" </pre>
