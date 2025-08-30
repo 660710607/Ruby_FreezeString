@@ -9,12 +9,12 @@
 <pre>s = "Hello"
 s << " World"
 puts s </pre>
-ถ้ารันโค้ด 3 บรรทัดข้างบน จะพบว่า Output = "Hello World" เนื่องจาก String นั้นยัง mutable by default (ยังแก้ไขค่าได้อยู่)
+จากโค้ด 3 บรรทัดบน ถ้ารันจะพบว่า Output = "Hello World" เนื่องจาก String นั้นยัง mutable by default (ยังแก้ไขค่าได้อยู่)
 <pre>s = "Hello"
 s << " World"
 s.freeze
 s << " Peace" </pre>
-แต่ถ้ารันโค้ด 4 บรรทัดข้างบน จะพบว่า Error = can't modify frozen String: "Hello World" (FrozenError)
+จากโค้ด 4 บรรทัดบน ถ้ารันจะพบ Error = can't modify frozen String: "Hello World" (FrozenError)
 ที่เกิด error ดังกล่าวเพราะว่า เราพยายามแก้ String ที่ถูก freeze ไปแล้ว (.freeze) ซึ่งจะเป็น error ชนิดที่ชื่อว่า "FrozenError)
 <br><br>ซึ่งถ้าอยากแก้ไข จะต้องสร้าง String ใหม่ แล้วแก้แทน
 <br><br> -> ตัวอย่างโค้ด
@@ -39,7 +39,9 @@ b << "World" </pre>
 b = +a
 b << "World"
 puts b </pre>
-โค้ดนี้ไม่เกิด error เพราะเป็นการเปลี่ยน string ที่ถูกทำให้ไม่ freeze แล้ว<br><br> 
+โค้ดนี้ไม่เกิด error เพราะเป็นการเปลี่ยน string ที่ถูกทำให้ไม่ freeze แล้ว
+<br>#### จากแหล่งที่มา https://www.techotopia.com/index.php/Ruby_String_Concatenation_and_Comparison#Freezing_a_Ruby_String
+<br><br>
 
 ## เปรียบเทียบกับภาษา Java/C/Python
 ### - Java
