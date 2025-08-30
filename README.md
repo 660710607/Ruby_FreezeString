@@ -1,1 +1,1 @@
-# 📝 Freezing a Ruby String
+# Freezing a Ruby String
