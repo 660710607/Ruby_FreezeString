@@ -53,4 +53,13 @@ s1 = s1.concat(" base");
 System.out.println(s1); </pre>
 จากโค้ดบนจะ output : knowledge base
 <br> ซึ่งเมื่อเรา concat (ต่อสตริง) มันจะสร้างสตริง "knowledge base" และใส่เข้า s1 ซึ่งสตริงเดิม (original) จะยังไม่ถูกเปลี่ยน (The original string remains unchanged.)
+#### จาก https://www.geeksforgeeks.org/java/java-string-is-immutable-what-exactly-is-the-meaning/
 
+<br><br> คำว่า "final" เป็น non-access modifier ซึ่งจะใช้เพื่อป้องกันการแก้ไขข้อมูล
+<br>ใช้กับตัวแปร = ค่าไม่เปลี่ยน , ใช้กับเมธอด = ไม่สามารถถูกเขียนทับได้ในคลาสลูก , ใช้กับคลาส = สืบทอดไม่ได้ (cannot be extended)
+<pre>final String b = "Hello";
+b = "Hola";; </pre>
+จากบนจะ error : The final local variable b cannot be assigned. It must be blank and not using a compound assignment
+<br>เพราะถ้าตัวแปรถูกประกาศเป็น final แล้วจะ กำหนดค่าให้มันได้เพียงครั้งเดียวเท่านั้น
+<br>หลังจากนั้นจะเปลี่ยนค่าไม่ได้อีก
+#### จาก https://www.geeksforgeeks.org/java/final-keyword-in-java/
