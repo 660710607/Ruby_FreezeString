@@ -25,4 +25,5 @@ puts new_str </pre>
 
 ## เปรียบเทียบกับภาษา Java/C/Python
 ### - Java
-<br>I dont know
+<br>I don't know
+<br>
