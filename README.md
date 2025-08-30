@@ -1,4 +1,4 @@
-### Freezing a Ruby String
+# Freezing a Ruby String
 
 ## เนื้อหา
 ปกติในภาษา Ruby การแก้ไข String หนึ่งจะสามารถทำได้ทันที (Mutable Object เช่น String , Array , Hash)
@@ -24,5 +24,5 @@ new_str = str + "!"
 puts new_str </pre>
 
 ## เปรียบเทียบกับภาษา Java/C/Python
-# - Java
+### - Java
 <br>I dont know
