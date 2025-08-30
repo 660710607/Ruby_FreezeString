@@ -45,5 +45,5 @@ puts b </pre>
 
 ## เปรียบเทียบกับภาษา Java/C/Python
 ### - Java
-<br>I don't know
-<br>
+<br>ในภาษา Java นั้นได้ถูกออกแบบมาให้ obj บางชนิดเป็น immutable อยู่แล้ว เช่น String
+<br> (Immutable = once it is created, it cannot be changed.)
