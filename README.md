@@ -66,9 +66,23 @@ b = "Hola";; </pre>
 
 ## - C
 <br>ในภาษาซีจะไม่มีการสร้างสตริงโดยตรง แต่จะเป็นการสร้างอาร์เรย์ จาก char
-<br>ซึ่งจะมีการใช้ const ทำให้ไม่สามารถแก้ไขค่าได้
+<br>ซึ่งจะมีการใช้ const ทำให้ไม่สามารถแก้ไขค่าได้ (ทำให้ variable เป็นแบบ read-only)
 <pre>const char s[] = "Hello";
 s[0] = 'h';</pre>
-<br>จากโค้ดจะ error บรรทัด 2 เพราะ string immutable เหมือน freeze ไปแล้ว
+<br>จากโค้ดจะ error : error: assignment of read-only variable เพราะพยายามแก้ไข string ที่ immutable เหมือน freeze ไปแล้ว
 
 ## - Python
+<br>ในภาษาไพธอน string จะมีความเป็น immutable อยู่แล้ว (คล้ายจาวา)
+<br>พูดง่ายๆ เราไม่สามารถแก้ไขตัวอักษรภายใน string เดิมได้ ซึ่งการเปลี่ยน string จะสร้าง string ใหม่ ไม่ใช่แก้ไข string เดิม
+<pre>s = "Hello"
+s.upper()
+print(s)
+s = s.upper()
+print(s) </pre>
+<br>จากโค้ดบน output บรรทัด 3 = Hello , output บรรทัด 5 = HELLO
+
+<br><br> การใช้ Final ในไพธอน ก็สามารถทำได้เหมือนจาวา แต่แค่มันไม่ built in เราจึงต้อง import ก่อนใช้
+<pre>from typing import Final
+NAME: Final = "607"
+NAME = 608 </pre>
+<br>จากโค้ดจะขึ้น Error: can't assign to final attribute
