@@ -13,10 +13,10 @@ s << " World"  </pre>
 s << " World"
 s.freeze
 s << " Peace" </pre>
-แต่ถ้ารันโค้ด 4 บรรทัดข้างบน จะพบว่า Error = HelloWorld.rb:4:in `<main>': can't modify frozen String: "Hello World" (FrozenError)
+แต่ถ้ารันโค้ด 4 บรรทัดข้างบน จะพบว่า Error = can't modify frozen String: "Hello World" (FrozenError)
 ที่เกิด error ดังกล่าวเพราะว่า เราพยายามแก้ String ที่ถูก freeze ไปแล้ว (.freeze) ซึ่งจะเป็น error ชนิดที่ชื่อว่า "FrozenError)
 ซึ่งถ้าอยากแก้ไข จะต้องสร้าง String ใหม่ แล้วแก้แทน
-<br> -> ตัวอย่างโค้ด
+<br><br> -> ตัวอย่างโค้ด
 <pre> str = "Hello World"
 str.freeze
 new_str = str + "!"
