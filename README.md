@@ -8,15 +8,13 @@
 <br> - จะเหมือนเป็นการล็อก String นั้นไว้ ไม่ให้แก้ค่าได้
 
 <br> -- ตัวอย่างโค้ด
-```s = "Hello"
-s << " World" ```
+<pre> ```s = "Hello"
+s << " World" ``` </pre>
 # ถ้ารันโค้ด 2 บรรทัดข้างบน จะพบว่า Output = "Hello World" เนื่องจาก s นั้นยัง mutable by default (ยังแก้ไขค่าได้อยู่)
-<br>
-```s = "Hello"
+<pre>```s = "Hello"
 s << " World"
 s.freeze
-s << " Peace"
-<br>
+s << " Peace" </pre>
 # แต่ถ้ารันโค้ด 4 บรรทัดข้างบน จะพบว่า Error = "HelloWorld.rb:4:in `<main>': can't modify frozen String: "Hello World" (FrozenError)"
 # ที่เกิด error ดังกล่าวเพราะว่า เราพยายามแก้ String ที่ถูก freeze ไปแล้ว (.freeze) ซึ่งจะเป็น error ชนิดที่ชื่อว่า "FrozenError)
 # ซึ่งสามารถแก้ได้โดยการ 
