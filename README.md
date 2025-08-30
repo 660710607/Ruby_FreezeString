@@ -22,7 +22,9 @@ s << " Peace" </pre>
 str.freeze
 new_str = str + "!"
 puts new_str </pre>
+#### จากแหล่งที่มา https://www.techotopia.com/index.php/Ruby_String_Concatenation_and_Comparison#Freezing_a_Ruby_String
 
+<br><br>
 ## เปรียบเทียบกับภาษา Java/C/Python
 ### - Java
 <br>I don't know
