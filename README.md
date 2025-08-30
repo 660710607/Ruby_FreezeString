@@ -45,5 +45,12 @@ puts b </pre>
 
 ## เปรียบเทียบกับภาษา Java/C/Python
 ### - Java
-<br>ในภาษา Java นั้นได้ถูกออกแบบมาให้ obj บางชนิดเป็น immutable อยู่แล้ว เช่น String
-<br> (Immutable = once it is created, it cannot be changed.)
+<br>ในภาษา Java นั้นได้ถูกออกแบบมาให้ obj บางชนิดเป็น immutable อยู่แล้ว (by default) เช่น String
+<br> ( Immutable = once it is created, it cannot be changed. )
+<pre>String s1 = "knowledge";
+String s2 = s1;
+s1 = s1.concat(" base");
+System.out.println(s1); </pre>
+จากโค้ดบนจะ output : knowledge base
+<br> ซึ่งเมื่อเรา concat (ต่อสตริง) มันจะสร้างสตริง "knowledge base" และใส่เข้า s1 ซึ่งสตริงเดิม (original) จะยังไม่ถูกเปลี่ยน (The original string remains unchanged.)
+
