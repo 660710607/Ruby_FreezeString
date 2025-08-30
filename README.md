@@ -8,11 +8,16 @@
 <br><br> -> ตัวอย่างโค้ด
 <pre> s = "Hello"
 s << " World"  </pre>
-# ถ้ารันโค้ด 2 บรรทัดข้างบน จะพบว่า Output = "Hello World" เนื่องจาก s นั้นยัง mutable by default (ยังแก้ไขค่าได้อยู่)
+# ถ้ารันโค้ด 2 บรรทัดข้างบน จะพบว่า Output = "Hello World" เนื่องจาก String นั้นยัง mutable by default (ยังแก้ไขค่าได้อยู่)
 <pre> s = "Hello"
 s << " World"
 s.freeze
 s << " Peace" </pre>
 # แต่ถ้ารันโค้ด 4 บรรทัดข้างบน จะพบว่า Error = "HelloWorld.rb:4:in `<main>': can't modify frozen String: "Hello World" (FrozenError)"
 # ที่เกิด error ดังกล่าวเพราะว่า เราพยายามแก้ String ที่ถูก freeze ไปแล้ว (.freeze) ซึ่งจะเป็น error ชนิดที่ชื่อว่า "FrozenError)
-# ซึ่งสามารถแก้ได้โดยการ 
+# ซึ่งถ้าอยากแก้ไข จะต้องสร้าง String ใหม่ แล้วแก้แทน
+<br> -> ตัวอย่างโค้ด
+<pre> str = "Hello World"
+str.freeze
+new_str = str + "!"
+puts new_str </pre>
