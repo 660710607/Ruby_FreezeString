@@ -44,7 +44,7 @@ puts b </pre>
 <br><br>
 
 ## เปรียบเทียบกับภาษา Java/C/Python
-# - Java
+## - Java
 <br>ในภาษา Java นั้นได้ถูกออกแบบมาให้ obj บางชนิดเป็น immutable อยู่แล้ว (by default) เช่น String
 <br> ( Immutable = once it is created, it cannot be changed. )
 <pre>String s1 = "knowledge";
@@ -64,4 +64,11 @@ b = "Hola";; </pre>
 <br>หลังจากนั้นจะเปลี่ยนค่าไม่ได้อีก
 #### จาก https://www.geeksforgeeks.org/java/final-keyword-in-java/
 
-# - C
+## - C
+<br>ในภาษาซีจะไม่มีการสร้างสตริงโดยตรง แต่จะเป็นการสร้างอาร์เรย์ จาก char
+<br>ซึ่งจะมีการใช้ const ทำให้ไม่สามารถแก้ไขค่าได้
+<pre>const char s[] = "Hello";
+s[0] = 'h';</pre>
+<br>จากโค้ดจะ error บรรทัด 2 เพราะ string immutable เหมือน freeze ไปแล้ว
+
+## - Python
