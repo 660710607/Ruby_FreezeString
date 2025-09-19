@@ -16,7 +16,7 @@ puts s6.frozen?
 ```
 <details>
 <summary> เฉลย </summary>
-## Output
+  
 ```ruby
   puts s1.frozen? == True เพราะ ถูก freeze ด้วย s1.freeze
   puts s2.frozen? == True เพราะ เป็น reference ของ s1 → frozen เหมือนกัน
