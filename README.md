@@ -163,4 +163,6 @@ NAME = 608 </pre>
 | C    | mutable (char array) | ใช้ const char[] | จะเกิด compile-time error (assignment of read-only variable) | string literal เก็บใน read-only memory; const ทำให้แก้ไม่ได้ |
 | Python | immutable (เหมือน Java) | ไม่ต้อง freeze แต่อาจมีการใช้ Final (ต้อง import เพิ่ม) | การแก้จะสร้าง string ใหม่แทน | ใช้ Final ได้ แต่จะเป็น type checker ไม่ใช่ runtime |
 
-[View the PDF in Drive](https://docs.google.com/presentation/d/146_iDgLc2JX7cLjYXR45tvjP6gZalEM-/edit?usp=drive_link&ouid=117155756499227889957&rtpof=true&sd=true)
+[ไฟล์ Slide](https://drive.google.com/file/d/1mXw1s9w6qAV3H645ag8ZgmJImHiUVyVm/view?usp=drive_link)
+
+[ลิงค์ Youtube](https://www.youtube.com/watch?v=ICTjlLDF75Y)
