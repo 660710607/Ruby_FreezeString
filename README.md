@@ -79,35 +79,43 @@ puts b </pre>
 
 ## - Java
 
-ในภาษา Java นั้นได้ถูกออกแบบมาให้ obj บางชนิดเป็น immutable อยู่แล้ว (by default) เช่น String
+String ใน Java เป็น Immutable อยู่แล้ว
 
-( Immutable = once it is created, it cannot be changed. )
 
-<pre>String s1 = "knowledge";
-String s2 = s1;
-s1 = s1.concat(" base");
-System.out.println(s1); </pre>
 
-จากโค้ดบนจะ output : knowledge base
+<pre>String s = "Hello";
+s.concat(" World");
+System.out.println(s); 
+</pre>
 
-ซึ่งเมื่อเรา concat (ต่อสตริง) มันจะสร้างสตริง "knowledge base" และใส่เข้า s1 ซึ่งสตริงเดิม (original) จะยังไม่ถูกเปลี่ยน (The original string remains unchanged.)
+Output: Hello
+
+<pre>s = s.concat(" World");
+System.out.println(s); 
+</pre>
+
+Output: Hello World
+
+
 
 #### จาก https://www.geeksforgeeks.org/java/java-string-is-immutable-what-exactly-is-the-meaning/
 
 
 
-คำว่า "final" เป็น non-access modifier ซึ่งจะใช้เพื่อป้องกันการแก้ไขข้อมูล
+ใช้ "final" 
 
-ใช้กับตัวแปร = ค่าไม่เปลี่ยน , ใช้กับเมธอด = ไม่สามารถถูกเขียนทับได้ในคลาสลูก , ใช้กับคลาส = สืบทอดไม่ได้ (cannot be extended)
+ป้องกันการเปลี่ยนแปลงค่าโดยไม่ตั้งใจ 
 
-<pre>final String b = "Hello";
-b = "Hola";; </pre>
 
-จากบนจะ error : The final local variable b cannot be assigned. It must be blank and not using a compound assignment
+<pre>final String a = "Hello";
+a = “Hi”; 
+</pre>
 
-เพราะถ้าตัวแปรถูกประกาศเป็น final แล้วจะ กำหนดค่าให้มันได้เพียงครั้งเดียวเท่านั้น
+Output = error : The final local variable b cannot be assigned.
 
+เพราะเป็น final จะ กำหนดค่าได้เพียงครั้งเดียวเท่านั้น
 หลังจากนั้นจะเปลี่ยนค่าไม่ได้อีก
+
 
 #### จาก https://www.geeksforgeeks.org/java/final-keyword-in-java/
 
@@ -115,14 +123,15 @@ b = "Hola";; </pre>
 
 ## - C
 
-ในภาษาซีจะไม่มีการสร้างสตริงโดยตรง แต่จะเป็นการสร้างอาร์เรย์ จาก char
+ไม่มีการสร้างสตริง แต่จะเป็นการสร้างอาร์เรย์ จาก char
+- ใช้ const ทำให้ไม่สามารถแก้ไขค่าได้ (read-only)
 
-ซึ่งจะมีการใช้ const ทำให้ไม่สามารถแก้ไขค่าได้ (ทำให้ variable เป็นแบบ read-only)
 
 <pre>const char s[] = "Hello";
-s[0] = 'h';</pre>
+s[0] = ‘h’;
+</pre>
 
-จากโค้ดจะ error : error: assignment of read-only variable เพราะพยายามแก้ไข string ที่ immutable เหมือน freeze ไปแล้ว
+Output = error: assignment of read-only variable เพราะแก้ไข string ที่ immutable แล้ว
 
 #### จาก https://www.geeksforgeeks.org/c/const-qualifier-in-c/
 
@@ -130,7 +139,8 @@ s[0] = 'h';</pre>
 
 ## - Python
 
-ในภาษาไพธอน string จะมีความเป็น immutable อยู่แล้ว (คล้ายจาวา)
+ในภาษาไพธอน string จะมีความเป็น immutable อยู่แล้ว 
+(คล้ายจาวา)
 
 พูดง่ายๆ เราไม่สามารถแก้ไขตัวอักษรภายใน string เดิมได้ ซึ่งการเปลี่ยน string จะสร้าง string ใหม่ ไม่ใช่แก้ไข string เดิม
 
@@ -144,13 +154,14 @@ print(s) </pre>
 
 
 
-การใช้ Final ในไพธอน ก็สามารถทำได้เหมือนจาวา แต่แค่มันไม่ built in เราจึงต้อง import ก่อนใช้
+ในไพธอน สามารถทำใช้ Final ได้แต่ต้อง Import
+
 
 <pre>from typing import Final
 NAME: Final = "607"
 NAME = 608 </pre>
 
-จากโค้ดจะขึ้น Error: can't assign to final attribute
+Output = error: Cannot assign to final name "x" 
 
 
 
