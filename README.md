@@ -165,6 +165,6 @@ NAME = 608 </pre>
 
 [ไฟล์ Slide PDF](https://drive.google.com/file/d/1mXw1s9w6qAV3H645ag8ZgmJImHiUVyVm/view?usp=drive_link)
 
-[ไฟล์ Slide PPTX](https://docs.google.com/presentation/d/1gYQQqxRACCdtWzDjj6Zw5aOqAij2K4-6/edit?usp=drive_link&ouid=117155756499227889957&rtpof=true&sd=true)
+[ไฟล์ Slide PPTX](https://docs.google.com/presentation/d/1gYQQqxRACCdtWzDjj6Zw5aOqAij2K4-6)
 
 [ลิงค์ Youtube](https://www.youtube.com/watch?v=ICTjlLDF75Y)
