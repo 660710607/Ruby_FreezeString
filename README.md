@@ -172,8 +172,8 @@ Output = error: Cannot assign to final name "x"
 
 | ภาษา     | String ปกติเป็น mutable? | วิธีทำให้ “freeze”                 | พฤติกรรมเมื่อแก้ไขหลัง freeze                   | หมายเหตุ |
 |----------|----------------------|------------------------------------|--------------------------------------------------|-----------|
-| Ruby | mutable (<<) | ใช้ .freeze                     | ขึ้น `FrozenError`                         | -@ = คืน string ที่ freeze แล้ว และ +@ คืน string ที่ไม่มีการ freeze |
-| Java | immutable (String แก้ไม่ได้อยู่แล้ว) | ไม่ต้อง freeze แต่อาจมีการป้องกันไม่ให้ตัวแปรเปลี่ยนด้วย final | สตริงเดิมไม่ถูกแก้ แต่การ concat จะสร้าง string ใหม่ | final กับตัวแปร = เปลี่ยนค่าไม่ได้, กับ method = override ไม่ได้, กับ class = inherit ไม่ได้ |
+| Ruby | mutable  | ใช้ .freeze                     | ขึ้น `FrozenError`                         | -@ = คืน string ที่ freeze แล้ว และ +@ คืน string ที่ไม่มีการ freeze |
+| Java | immutable (String แก้ไม่ได้อยู่แล้ว) | ไม่ต้อง freeze แต่อาจมีการป้องกันไม่ให้ตัวแปรเปลี่ยนด้วย final | สตริงเดิมไม่ถูกแก้ แต่จะสร้าง string ใหม่แทน | final กับตัวแปร = เปลี่ยนค่าไม่ได้, กับ method = override ไม่ได้, กับ class = inherit ไม่ได้ |
 | C    | mutable (char array) | ใช้ const char[] | จะเกิด compile-time error (assignment of read-only variable) | string literal เก็บใน read-only memory; const ทำให้แก้ไม่ได้ |
 | Python | immutable (เหมือน Java) | ไม่ต้อง freeze แต่อาจมีการใช้ Final (ต้อง import เพิ่ม) | การแก้จะสร้าง string ใหม่แทน | ใช้ Final ได้ แต่จะเป็น type checker ไม่ใช่ runtime |
 
