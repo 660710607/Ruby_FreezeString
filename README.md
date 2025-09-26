@@ -83,7 +83,7 @@ puts b </pre>
 String ใน Java เป็น Immutable อยู่แล้ว
 
 
-
+-> ตัวอย่าง
 <pre>String s = "Hello";
 s.concat(" World");
 System.out.println(s); 
@@ -91,6 +91,7 @@ System.out.println(s);
 
 Output: Hello
 
+-> ตัวอย่าง
 <pre>s = s.concat(" World");
 System.out.println(s); 
 </pre>
@@ -107,7 +108,7 @@ Output: Hello World
 
 ป้องกันการเปลี่ยนแปลงค่าโดยไม่ตั้งใจ 
 
-
+-> ตัวอย่าง
 <pre>final String a = "Hello";
 a = “Hi”; 
 </pre>
@@ -127,7 +128,7 @@ Output = error : The final local variable b cannot be assigned.
 ไม่มีการสร้างสตริง แต่จะเป็นการสร้างอาร์เรย์ จาก char
 - ใช้ const ทำให้ไม่สามารถแก้ไขค่าได้ (read-only)
 
-
+-> ตัวอย่าง
 <pre>const char s[] = "Hello";
 s[0] = ‘h’;
 </pre>
@@ -145,6 +146,7 @@ Output = error: assignment of read-only variable เพราะแก้ไข 
 
 พูดง่ายๆ เราไม่สามารถแก้ไขตัวอักษรภายใน string เดิมได้ ซึ่งการเปลี่ยน string จะสร้าง string ใหม่ ไม่ใช่แก้ไข string เดิม
 
+-> ตัวอย่าง
 <pre>s = "Hello"
 s.upper()
 print(s)
@@ -157,7 +159,7 @@ print(s) </pre>
 
 ในไพธอน สามารถทำใช้ Final ได้แต่ต้อง Import
 
-
+-> ตัวอย่าง
 <pre>from typing import Final
 NAME: Final = "607"
 NAME = 608 </pre>
