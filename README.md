@@ -18,6 +18,7 @@ puts s </pre>
 
 Output = "Hello World"
 
+-> ตัวอย่าง
 <pre>s = "Hello“
 s << " World“
 s.freeze
