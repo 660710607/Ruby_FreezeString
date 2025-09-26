@@ -177,8 +177,8 @@ Output = error: Cannot assign to final name "x"
 | C    | mutable (char array) | ใช้ const char[] | จะเกิด compile-time error (assignment of read-only variable) | string literal เก็บใน read-only memory; const ทำให้แก้ไม่ได้ |
 | Python | immutable (เหมือน Java) | ไม่ต้อง freeze แต่อาจมีการใช้ Final (ต้อง import เพิ่ม) | การแก้จะสร้าง string ใหม่แทน | ใช้ Final ได้ แต่จะเป็น type checker ไม่ใช่ runtime |
 
-[ไฟล์ Slide PDF](https://drive.google.com/file/d/1mXw1s9w6qAV3H645ag8ZgmJImHiUVyVm/view?usp=drive_link)
+[ไฟล์ Slide PDF](https://drive.google.com/file/d/1LQWBZHEEOt0C_fXZwEyf8NdGr7pP6Qq3)
 
-[ไฟล์ Slide PPTX](https://docs.google.com/presentation/d/1gYQQqxRACCdtWzDjj6Zw5aOqAij2K4-6)
+[ไฟล์ Slide PPTX](https://docs.google.com/presentation/d/1CaTPo1svv6tO9WSD0ZKCgshqN4vBUzTX)
 
 [ลิงค์ Youtube](https://www.youtube.com/watch?v=ICTjlLDF75Y)
